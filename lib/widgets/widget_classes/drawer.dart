@@ -1,6 +1,7 @@
 import 'package:bootstrap_icons/bootstrap_icons.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:sendit/view/Home/pages/product/notification_screen.dart';
 
 import '../../view/Home/pages/user/user_profile.dart';
 import '../views/drawer_list.dart';
@@ -73,7 +74,11 @@ class DrawerWidget extends StatelessWidget {
             ),
           ),
           DrawerList(
-            callback: () {},
+            callback: () {
+              Navigator.of(context).push(CupertinoPageRoute(builder: (context) {
+                return const NotifPage();
+              }));
+            },
             icon: const Icon(Icons.notifications_none_rounded),
             title: 'Notifications',
             subtitle: 'Check parcel notifications.',
