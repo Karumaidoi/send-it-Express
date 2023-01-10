@@ -17,7 +17,65 @@ class HomePage extends StatelessWidget {
         backgroundColor: Theme.of(context).backgroundColor,
         drawer: Drawer(
           child: Column(
-            children: [DrawerHeader(child: Column())],
+            children: [
+              DrawerHeader(
+                padding: const EdgeInsets.all(0),
+                decoration: const BoxDecoration(),
+                child: Container(
+                  width: double.infinity,
+                  color: Colors.transparent,
+                  child: Center(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        CircleAvatar(
+                          radius: 30,
+                          backgroundColor: Theme.of(context).primaryColor,
+                          child: const Text(
+                            'M',
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 22,
+                                color: Colors.white),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 15,
+                        ),
+                        const Text(
+                          'Alex Maina',
+                          style: TextStyle(
+                              fontSize: 15, fontWeight: FontWeight.bold),
+                        ),
+                        const SizedBox(
+                          height: 5,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              'SendIt Account',
+                              style: TextStyle(
+                                fontSize: 12,
+                                color: Theme.of(context).buttonColor,
+                                fontWeight: FontWeight.normal,
+                              ),
+                            ),
+                            const SizedBox(
+                              width: 8,
+                            ),
+                            const Icon(
+                              BootstrapIcons.patch_check,
+                              size: 14,
+                            )
+                          ],
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+              )
+            ],
           ),
         ),
         appBar: AppBar(
