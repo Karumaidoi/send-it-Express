@@ -46,7 +46,7 @@ class _MainHomeState extends State<MainHome> {
               ),
               label: 'Discover'),
           BottomNavigationBarItem(
-              tooltip: 'Rated',
+              tooltip: 'Rates',
               icon: Icon(
                 BootstrapIcons.radioactive,
                 size: 22,
