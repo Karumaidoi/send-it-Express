@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sendit/view/Home/pages/user/user_profile.dart';
 import 'package:sendit/widgets/views/all_parcels.dart';
+import 'package:sendit/widgets/views/drawer_list.dart';
 import 'package:sendit/widgets/views/from_me_parcel.dart';
 import 'package:sendit/widgets/views/to_me_parcels.dart';
 
@@ -74,7 +75,31 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                 ),
-              )
+              ),
+              DrawerList(
+                callback: () {},
+                icon: const Icon(Icons.notifications_none_rounded),
+                title: 'Notifications',
+                subtitle: 'Check parcel notifications.',
+              ),
+              DrawerList(
+                callback: () {
+                  Navigator.of(context)
+                      .push(CupertinoPageRoute(builder: (context) {
+                    return const SettingsPage();
+                  }));
+                },
+                icon: const Icon(CupertinoIcons.gear),
+                title: 'Settings',
+                subtitle: 'Set app & account preferenced.',
+              ),
+              const Spacer(
+                flex: 4,
+              ),
+              const Text('SendIt v1.0.0'),
+              const Spacer(
+                flex: 1,
+              ),
             ],
           ),
         ),
