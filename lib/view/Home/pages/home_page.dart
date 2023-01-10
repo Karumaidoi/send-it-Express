@@ -15,9 +15,23 @@ class HomePage extends StatelessWidget {
       length: 3,
       child: Scaffold(
         backgroundColor: Theme.of(context).backgroundColor,
+        drawer: Drawer(
+          child: Column(
+            children: [DrawerHeader(child: Column())],
+          ),
+        ),
         appBar: AppBar(
           title: const HeaderInfoWidget(),
-          leading: IconButton(onPressed: () {}, icon: const Icon(Icons.menu)),
+          leading: Builder(builder: (context) {
+            return IconButton(
+                onPressed: () {
+                  Scaffold.of(context).openDrawer();
+                },
+                icon: Icon(
+                  Icons.menu,
+                  color: Theme.of(context).buttonColor,
+                ));
+          }),
           centerTitle: false,
           bottom: const TabBar(
               isScrollable: false,
