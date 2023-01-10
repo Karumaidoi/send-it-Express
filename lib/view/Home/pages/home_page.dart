@@ -1,11 +1,11 @@
 import 'package:bootstrap_icons/bootstrap_icons.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:sendit/view/Home/pages/user/user_profile.dart';
 import 'package:sendit/widgets/views/all_parcels.dart';
-import 'package:sendit/widgets/views/drawer_list.dart';
 import 'package:sendit/widgets/views/from_me_parcel.dart';
 import 'package:sendit/widgets/views/to_me_parcels.dart';
+
+import '../../../widgets/widget_classes/drawer.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -16,93 +16,7 @@ class HomePage extends StatelessWidget {
       length: 3,
       child: Scaffold(
         backgroundColor: Theme.of(context).backgroundColor,
-        drawer: Drawer(
-          child: Column(
-            children: [
-              DrawerHeader(
-                padding: const EdgeInsets.all(0),
-                decoration: const BoxDecoration(),
-                child: Container(
-                  width: double.infinity,
-                  color: Colors.transparent,
-                  child: Center(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        CircleAvatar(
-                          radius: 30,
-                          backgroundColor: Theme.of(context).primaryColor,
-                          child: const Text(
-                            'M',
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 22,
-                                color: Colors.white),
-                          ),
-                        ),
-                        const SizedBox(
-                          height: 15,
-                        ),
-                        const Text(
-                          'Alex Maina',
-                          style: TextStyle(
-                              fontSize: 15, fontWeight: FontWeight.bold),
-                        ),
-                        const SizedBox(
-                          height: 5,
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              'SendIt Account',
-                              style: TextStyle(
-                                fontSize: 12,
-                                color: Theme.of(context).buttonColor,
-                                fontWeight: FontWeight.normal,
-                              ),
-                            ),
-                            const SizedBox(
-                              width: 8,
-                            ),
-                            const Icon(
-                              BootstrapIcons.patch_check,
-                              size: 14,
-                            )
-                          ],
-                        )
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              DrawerList(
-                callback: () {},
-                icon: const Icon(Icons.notifications_none_rounded),
-                title: 'Notifications',
-                subtitle: 'Check parcel notifications.',
-              ),
-              DrawerList(
-                callback: () {
-                  Navigator.of(context)
-                      .push(CupertinoPageRoute(builder: (context) {
-                    return const SettingsPage();
-                  }));
-                },
-                icon: const Icon(CupertinoIcons.gear),
-                title: 'Settings',
-                subtitle: 'Set app & account preferenced.',
-              ),
-              const Spacer(
-                flex: 4,
-              ),
-              const Text('SendIt v1.0.0'),
-              const Spacer(
-                flex: 1,
-              ),
-            ],
-          ),
-        ),
+        drawer: const DrawerWidget(),
         appBar: AppBar(
           title: const HeaderInfoWidget(),
           leading: Builder(builder: (context) {

@@ -51,7 +51,7 @@ class _MyAppState extends State<MyApp> {
           return MaterialApp(
             debugShowCheckedModeBanner: false,
             title: 'Sendit',
-            theme: Styles.themeData(!themeChangeProvider.darkTheme, context),
+            theme: Styles.themeData(themeChangeProvider.darkTheme, context),
             home: const SplashScreen(),
           );
         });
