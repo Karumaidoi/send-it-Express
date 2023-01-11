@@ -32,6 +32,14 @@ class ProductParcelPage extends StatelessWidget {
       backgroundColor: Theme.of(context).backgroundColor,
       appBar: AppBar(
         centerTitle: false,
+        leading: IconButton(
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
+            icon: Icon(
+              Icons.arrow_back_ios,
+              color: Theme.of(context).buttonColor,
+            )),
         title: const Text(
           'Parcel',
           style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
