@@ -93,13 +93,6 @@ class DrawerWidget extends StatelessWidget {
             title: 'Account',
             subtitle: 'Set app & account preferences.',
           ),
-          const Spacer(
-            flex: 4,
-          ),
-          const Text('SendIt v1.0.0'),
-          const Spacer(
-            flex: 1,
-          ),
         ],
       ),
     );
