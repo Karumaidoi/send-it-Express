@@ -89,9 +89,9 @@ class DrawerWidget extends StatelessWidget {
                 return const SettingsPage();
               }));
             },
-            icon: const Icon(CupertinoIcons.gear),
-            title: 'Settings',
-            subtitle: 'Set app & account preferenced.',
+            icon: const Icon(CupertinoIcons.person),
+            title: 'Account',
+            subtitle: 'Set app & account preferences.',
           ),
           const Spacer(
             flex: 4,
