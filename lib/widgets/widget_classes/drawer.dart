@@ -55,7 +55,11 @@ class DrawerWidget extends StatelessWidget {
                           'SendIt Account',
                           style: TextStyle(
                             fontSize: 12,
-                            color: Theme.of(context).buttonColor,
+                            color: Theme.of(context)
+                                .buttonTheme
+                                .colorScheme!
+                                .background
+                                .withOpacity(.4),
                             fontWeight: FontWeight.normal,
                           ),
                         ),

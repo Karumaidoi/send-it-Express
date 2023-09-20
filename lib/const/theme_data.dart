@@ -9,11 +9,9 @@ class Styles {
       scaffoldBackgroundColor:
           isDarkTheme ? Colors.black : Colors.grey.shade300,
       primaryColor: Color(0xFFEB6440),
-      accentColor: isDarkTheme ? const Color(0xFF151515) : Colors.transparent,
       backgroundColor:
           isDarkTheme ? const Color.fromARGB(255, 0, 0, 0) : Colors.white,
       indicatorColor: isDarkTheme ? Colors.white : const Color(0xFF545d5C),
-      buttonColor: isDarkTheme ? Colors.white : const Color(0xff323232),
       hintColor: isDarkTheme ? Colors.grey.shade300 : Colors.grey.shade800,
       highlightColor: isDarkTheme ? Colors.white30 : const Color(0xffFCE192),
       hoverColor:
@@ -44,6 +42,9 @@ class Styles {
           selectionColor: isDarkTheme
               ? Color.fromARGB(55, 255, 255, 255)
               : Color.fromARGB(64, 0, 0, 0)),
+      colorScheme: ColorScheme.fromSwatch().copyWith(
+          secondary:
+              isDarkTheme ? const Color(0xFF151515) : Colors.transparent),
     );
   }
 }

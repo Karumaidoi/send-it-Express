@@ -65,7 +65,12 @@ class DeliveryWidget extends StatelessWidget {
                     style: TextStyle(
                         fontSize: 15,
                         fontWeight: FontWeight.normal,
-                        color: Theme.of(context).buttonColor.withOpacity(.5)),
+                        color: Theme.of(context)
+                            .buttonTheme
+                            .colorScheme!
+                            .background
+                            .withOpacity(.4)
+                            .withOpacity(.5)),
                   ),
                 ],
               ),
@@ -85,7 +90,12 @@ class DeliveryWidget extends StatelessWidget {
                     style: TextStyle(
                         fontSize: 15,
                         fontWeight: FontWeight.normal,
-                        color: Theme.of(context).buttonColor.withOpacity(.5)),
+                        color: Theme.of(context)
+                            .buttonTheme
+                            .colorScheme!
+                            .background
+                            .withOpacity(.4)
+                            .withOpacity(.5)),
                   ),
                 ],
               )
@@ -113,7 +123,12 @@ class DeliveryWidget extends StatelessWidget {
                       style: TextStyle(
                           fontSize: 14,
                           fontWeight: FontWeight.w500,
-                          color: Theme.of(context).buttonColor.withOpacity(.5)),
+                          color: Theme.of(context)
+                              .buttonTheme
+                              .colorScheme!
+                              .background
+                              .withOpacity(.4)
+                              .withOpacity(.5)),
                     ),
                     const SizedBox(
                       height: 14,
@@ -138,8 +153,10 @@ class DeliveryWidget extends StatelessWidget {
                               fontSize: 14,
                               fontWeight: FontWeight.w500,
                               color: Theme.of(context)
-                                  .buttonColor
-                                  .withOpacity(.5)),
+                                  .buttonTheme
+                                  .colorScheme!
+                                  .background
+                                  .withOpacity(.4)),
                         ),
                         const SizedBox(
                           height: 7,
@@ -184,8 +201,10 @@ class DeliveryWidget extends StatelessWidget {
                               fontSize: 14,
                               fontWeight: FontWeight.w500,
                               color: Theme.of(context)
-                                  .buttonColor
-                                  .withOpacity(.5)),
+                                  .buttonTheme
+                                  .colorScheme!
+                                  .background
+                                  .withOpacity(.4)),
                         ),
                         const Text(
                           'SendIt',

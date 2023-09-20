@@ -39,12 +39,22 @@ class _SettingsPageState extends State<SettingsPage> {
           },
           icon: Icon(
             Icons.arrow_back_ios,
-            color: Theme.of(context).buttonColor,
+            color: Theme.of(context)
+                .buttonTheme
+                .colorScheme!
+                .background
+                .withOpacity(.4),
           ),
         ),
         title: Text(
           'Settings',
-          style: TextStyle(fontSize: 15, color: Theme.of(context).buttonColor),
+          style: TextStyle(
+              fontSize: 15,
+              color: Theme.of(context)
+                  .buttonTheme
+                  .colorScheme!
+                  .background
+                  .withOpacity(.4)),
         ),
       ),
       body: Padding(
@@ -68,7 +78,11 @@ class _SettingsPageState extends State<SettingsPage> {
                           height: 65,
                           width: 65,
                           decoration: BoxDecoration(
-                              color: Theme.of(context).buttonColor,
+                              color: Theme.of(context)
+                                  .buttonTheme
+                                  .colorScheme!
+                                  .background
+                                  .withOpacity(.4),
                               borderRadius: BorderRadius.circular(18)),
                           child: Center(
                             child: Text(
@@ -91,7 +105,11 @@ class _SettingsPageState extends State<SettingsPage> {
                               'mainahmwangi12@gmail.com',
                               style: TextStyle(
                                 fontSize: 13,
-                                color: Theme.of(context).buttonColor,
+                                color: Theme.of(context)
+                                    .buttonTheme
+                                    .colorScheme!
+                                    .background
+                                    .withOpacity(.4),
                                 fontWeight: FontWeight.w500,
                               ),
                             ),
@@ -104,7 +122,11 @@ class _SettingsPageState extends State<SettingsPage> {
                                   'SendIt Account',
                                   style: TextStyle(
                                     fontSize: 12,
-                                    color: Theme.of(context).buttonColor,
+                                    color: Theme.of(context)
+                                        .buttonTheme
+                                        .colorScheme!
+                                        .background
+                                        .withOpacity(.4),
                                     fontWeight: FontWeight.normal,
                                   ),
                                 ),
@@ -148,7 +170,11 @@ class _SettingsPageState extends State<SettingsPage> {
                                   style: TextStyle(
                                       fontSize: 14,
                                       fontWeight: FontWeight.w500,
-                                      color: Theme.of(context).buttonColor),
+                                      color: Theme.of(context)
+                                          .buttonTheme
+                                          .colorScheme!
+                                          .background
+                                          .withOpacity(.4)),
                                 ),
                                 const SizedBox(
                                   height: 6,
@@ -157,7 +183,11 @@ class _SettingsPageState extends State<SettingsPage> {
                                     style: TextStyle(
                                         fontSize: 14,
                                         fontWeight: FontWeight.bold,
-                                        color: Theme.of(context).buttonColor))
+                                        color: Theme.of(context)
+                                            .buttonTheme
+                                            .colorScheme!
+                                            .background
+                                            .withOpacity(.4)))
                               ],
                             ),
                             const Spacer(),
@@ -185,14 +215,23 @@ class _SettingsPageState extends State<SettingsPage> {
                     title: Text(
                       'Theme',
                       style: TextStyle(
-                        color: Theme.of(context).buttonColor,
+                        color: Theme.of(context)
+                            .buttonTheme
+                            .colorScheme!
+                            .background
+                            .withOpacity(.4),
                         fontWeight: FontWeight.bold,
                         fontSize: 12,
                       ),
                     ),
                     subtitle: Text(
                       'Toggle to change theme',
-                      style: TextStyle(color: Theme.of(context).buttonColor),
+                      style: TextStyle(
+                          color: Theme.of(context)
+                              .buttonTheme
+                              .colorScheme!
+                              .background
+                              .withOpacity(.4)),
                     ),
                     trailing: CupertinoSwitch(
                         value: themeChange.darkTheme,
@@ -213,14 +252,23 @@ class _SettingsPageState extends State<SettingsPage> {
                     title: Text(
                       'Rate & Review us',
                       style: TextStyle(
-                        color: Theme.of(context).buttonColor,
+                        color: Theme.of(context)
+                            .buttonTheme
+                            .colorScheme!
+                            .background
+                            .withOpacity(.4),
                         fontWeight: FontWeight.bold,
                         fontSize: 12,
                       ),
                     ),
                     subtitle: Text(
                       'Give us your feedback',
-                      style: TextStyle(color: Theme.of(context).buttonColor),
+                      style: TextStyle(
+                          color: Theme.of(context)
+                              .buttonTheme
+                              .colorScheme!
+                              .background
+                              .withOpacity(.4)),
                     ),
                   ),
                   ListTile(
@@ -261,7 +309,11 @@ class _SettingsPageState extends State<SettingsPage> {
                     title: Text(
                       'About',
                       style: TextStyle(
-                        color: Theme.of(context).buttonColor,
+                        color: Theme.of(context)
+                            .buttonTheme
+                            .colorScheme!
+                            .background
+                            .withOpacity(.4),
                         fontWeight: FontWeight.bold,
                         fontSize: 13,
                       ),
@@ -269,7 +321,11 @@ class _SettingsPageState extends State<SettingsPage> {
                     subtitle: Text(
                       'V 2.0.1 Dolphin',
                       style: TextStyle(
-                          color: Theme.of(context).buttonColor,
+                          color: Theme.of(context)
+                              .buttonTheme
+                              .colorScheme!
+                              .background
+                              .withOpacity(.4),
                           fontFamily: "Nunito"),
                     ),
                   ),
@@ -323,14 +379,23 @@ class _SettingsPageState extends State<SettingsPage> {
                     title: Text(
                       'Log Out',
                       style: TextStyle(
-                        color: Theme.of(context).buttonColor,
+                        color: Theme.of(context)
+                            .buttonTheme
+                            .colorScheme!
+                            .background
+                            .withOpacity(.4),
                         fontWeight: FontWeight.bold,
                         fontSize: 12,
                       ),
                     ),
                     subtitle: Text(
                       'Log out from the app',
-                      style: TextStyle(color: Theme.of(context).buttonColor),
+                      style: TextStyle(
+                          color: Theme.of(context)
+                              .buttonTheme
+                              .colorScheme!
+                              .background
+                              .withOpacity(.4)),
                     ),
                   )
                 ],

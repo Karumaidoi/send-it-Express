@@ -3,7 +3,7 @@ import 'package:cupertino_onboarding/cupertino_onboarding.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:sendit/view/Auth/main_auth.dart';
+import 'package:sendit/view/Home/pages/home_page.dart';
 
 class OnBoardingScreen extends StatelessWidget {
   const OnBoardingScreen({super.key});
@@ -13,7 +13,7 @@ class OnBoardingScreen extends StatelessWidget {
     return CupertinoOnboarding(
       onPressedOnLastPage: () => Navigator.of(context)
           .pushReplacement(CupertinoPageRoute(builder: (context) {
-        return MainAuth();
+        return const HomePage();
       })),
       bottomButtonColor: Theme.of(context).primaryColor,
       bottomButtonChild:

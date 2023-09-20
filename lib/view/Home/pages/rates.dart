@@ -14,7 +14,11 @@ class RatesPage extends StatelessWidget {
           style: TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 16,
-              color: Theme.of(context).buttonColor),
+              color: Theme.of(context)
+                  .buttonTheme
+                  .colorScheme!
+                  .background
+                  .withOpacity(.4)),
         ),
       ),
     );

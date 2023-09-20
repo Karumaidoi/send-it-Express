@@ -26,7 +26,11 @@ class HomePage extends StatelessWidget {
                 },
                 icon: Icon(
                   Icons.menu,
-                  color: Theme.of(context).buttonColor,
+                  color: Theme.of(context)
+                      .buttonTheme
+                      .colorScheme!
+                      .background
+                      .withOpacity(.4),
                 ));
           }),
           centerTitle: false,
@@ -134,9 +138,9 @@ class OutDeliveryWidget extends StatelessWidget {
                   const SizedBox(
                     height: 5,
                   ),
-                  Text(
-                    companyName,
-                    style: const TextStyle(
+                  const Text(
+                    'Bestypie',
+                    style: TextStyle(
                       fontSize: 13,
                     ),
                   ),
@@ -155,7 +159,7 @@ class OutDeliveryWidget extends StatelessWidget {
               )
             ],
           ),
-          const Spacer(),
+          // const Spacer(),
           Column(
             children: [
               Text(
@@ -203,7 +207,11 @@ class HeaderInfoWidget extends StatelessWidget {
                 style: TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.w500,
-                    color: Theme.of(context).buttonColor),
+                    color: Theme.of(context)
+                        .buttonTheme
+                        .colorScheme!
+                        .background
+                        .withOpacity(.4)),
               ),
               const SizedBox(
                 height: 6,
@@ -212,7 +220,11 @@ class HeaderInfoWidget extends StatelessWidget {
                   style: TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.bold,
-                      color: Theme.of(context).buttonColor))
+                      color: Theme.of(context)
+                          .buttonTheme
+                          .colorScheme!
+                          .background
+                          .withOpacity(.4)))
             ],
           ),
           const Spacer(),
@@ -239,7 +251,11 @@ class UserAccountWidget extends StatelessWidget {
       child: Center(
         child: Icon(
           CupertinoIcons.gear,
-          color: Theme.of(context).buttonColor,
+          color: Theme.of(context)
+              .buttonTheme
+              .colorScheme!
+              .background
+              .withOpacity(.4),
         ),
       ),
     );

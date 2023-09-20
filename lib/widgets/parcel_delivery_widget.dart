@@ -70,7 +70,11 @@ class _ParcelDeliveryStatusWidgetState
                               child: Text(
                                 widget.productName.split('')[0].toUpperCase(),
                                 style: TextStyle(
-                                  color: Theme.of(context).buttonColor,
+                                  color: Theme.of(context)
+                                      .buttonTheme
+                                      .colorScheme!
+                                      .background
+                                      .withOpacity(.4),
                                   fontWeight: FontWeight.bold,
                                   fontSize: 17,
                                 ),

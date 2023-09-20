@@ -38,7 +38,11 @@ class ProductParcelPage extends StatelessWidget {
             },
             icon: Icon(
               Icons.arrow_back_ios,
-              color: Theme.of(context).buttonColor,
+              color: Theme.of(context)
+                  .buttonTheme
+                  .colorScheme!
+                  .background
+                  .withOpacity(.4),
             )),
         title: const Text(
           'Parcel',
@@ -190,7 +194,12 @@ class ProductParcelPage extends StatelessWidget {
                   style: TextStyle(
                       fontSize: 13,
                       fontWeight: FontWeight.normal,
-                      color: Theme.of(context).buttonColor.withOpacity(.6)),
+                      color: Theme.of(context)
+                          .buttonTheme
+                          .colorScheme!
+                          .background
+                          .withOpacity(.4)
+                          .withOpacity(.6)),
                 ),
                 const SizedBox(
                   height: 10,
